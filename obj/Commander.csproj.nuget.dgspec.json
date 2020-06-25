@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\code\\RecipeApi\\Commander.csproj": {}
+    "C:\\code\\RecipeAPI\\Commander.csproj": {}
   },
   "projects": {
-    "C:\\code\\RecipeApi\\Commander.csproj": {
+    "C:\\code\\RecipeAPI\\Commander.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\code\\RecipeApi\\Commander.csproj",
+        "projectUniqueName": "C:\\code\\RecipeAPI\\Commander.csproj",
         "projectName": "Commander",
-        "projectPath": "C:\\code\\RecipeApi\\Commander.csproj",
+        "projectPath": "C:\\code\\RecipeAPI\\Commander.csproj",
         "packagesPath": "C:\\Users\\joshc\\.nuget\\packages\\",
-        "outputPath": "C:\\code\\RecipeApi\\obj\\",
+        "outputPath": "C:\\code\\RecipeAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -40,6 +40,22 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.sqlserver": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
