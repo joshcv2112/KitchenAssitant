@@ -1,0 +1,5 @@
+6/30/20
+Created RecipeAPISolution folder with src and test subdirectories.
+Scaffolded initial RecipeAPI project
+    - ran `dotnet new web -n RecipeAPI` command in src folder.
+    
