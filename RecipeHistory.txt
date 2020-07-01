@@ -1,5 +1,9 @@
+The purpose of this file is to serve as a journal of sorts so I can remember the steps I took at various parts of the project. Hopefully writing these steps down will help ingrain them in my memory.
+
 6/30/20
-Created RecipeAPISolution folder with src and test subdirectories.
-Scaffolded initial RecipeAPI project
-    - ran `dotnet new web -n RecipeAPI` command in src folder.
+    Created RecipeAPISolution folder with src and test subdirectories.
+    Scaffolded initial RecipeAPI project
+        - ran `dotnet new web -n RecipeAPI` command in src folder.
+    Scaffolded RecipeAPI.Test project for unit testing.
+        - ran `dotnet new xunit -n CommandAPI.Tests`
     
