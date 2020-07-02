@@ -7,3 +7,6 @@ Scaffolded RecipeAPI.Test project for unit testing. - ran `dotnet new xunit -n C
 Created RecipeAPISolution - ran `dotnet new sln --name CommandAPISolution`
 Associated child projects with the new solution: - ran `dotnet sln RecipeAPISolution.sln add src/RecipeAPI/RecipeAPI.csproj test/RecipeAPI.Tests/RecipeAPI.Tests.csproj`
 Placed reference to our API project in the Unit Test project. - ran`dotnet add test/RecipeAPI.Tests/RecipeAPI.Tests.csproj reference src/RecipeAPI/RecipeAPI.csproj`
+
+7/1/20
+Completed Chapter 5 of book. Added RecipeController.
