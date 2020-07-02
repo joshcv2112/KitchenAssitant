@@ -23,10 +23,14 @@ namespace RecipeAPI.Models
 
         public string Source { get; set; }
 
-        public int rating { get; set; }
+        public int Rating { get; set; }
 
         public string PrepTime { get; set; }
+
+        /*
+        // Additional data:
         //image?
         //comments (probably an object of its own)
+        */
     }
 }
