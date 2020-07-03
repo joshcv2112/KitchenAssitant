@@ -29,7 +29,7 @@ namespace RecipeAPI.Data
                            Rating=5,
                            PrepTime="5 min"
                            },
-                new Recipe{Id = 0, Title="My First Recipe",
+                new Recipe{Id = 1, Title="My First Recipe",
                            Ingredients=new List<string> {
                                "Potatoes","Cheese"
                            },
@@ -39,7 +39,7 @@ namespace RecipeAPI.Data
                            Rating=5,
                            PrepTime="5 min"
                            },
-                new Recipe{Id = 0, Title="My First Recipe",
+                new Recipe{Id = 2, Title="My First Recipe",
                            Ingredients=new List<string> {
                                "Potatoes","Cheese"
                            },
