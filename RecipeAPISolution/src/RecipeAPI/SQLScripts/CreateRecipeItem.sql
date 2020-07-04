@@ -1,0 +1,1 @@
+insert into "RecipeItems" ("Title", "Ingredients", "Instructions", "Description", "Source", "Rating", "PrepTime") values ('eggs', 'eggs, oil, salt', 'just make it, its really easy', 'its a good one', 'bonapetit.com', 5, '10 minutes');
