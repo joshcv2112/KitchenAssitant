@@ -20,29 +20,23 @@ namespace RecipeAPI.Data
             var recipes = new List<Recipe>
             {
                 new Recipe{Id = 0, Title="My First Recipe",
-                           Ingredients=new List<string> {
-                               "Potatoes","Cheese"
-                           },
+                           Ingredients="Potatoes, Cheese",
                            Instructions="",
                            Description="",
                            Source="",
                            Rating=5,
                            PrepTime="5 min"
                            },
-                new Recipe{Id = 0, Title="My First Recipe",
-                           Ingredients=new List<string> {
-                               "Potatoes","Cheese"
-                           },
+                new Recipe{Id = 1, Title="My First Recipe",
+                           Ingredients="Potatoes, Cheese",
                            Instructions="",
                            Description="",
                            Source="",
                            Rating=5,
                            PrepTime="5 min"
                            },
-                new Recipe{Id = 0, Title="My First Recipe",
-                           Ingredients=new List<string> {
-                               "Potatoes","Cheese"
-                           },
+                new Recipe{Id = 2, Title="My First Recipe",
+                           Ingredients="Potatoes, Cheese",
                            Instructions="",
                            Description="",
                            Source="",
@@ -57,9 +51,7 @@ namespace RecipeAPI.Data
         {
             return new Recipe
             {
-                Ingredients = new List<string> {
-                               "Potatoes","Cheese"
-                           },
+                Ingredients = "Potatoes, Cheese",
                 Instructions = "",
                 Description = "",
                 Source = "",
