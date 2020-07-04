@@ -38,3 +38,5 @@ C:\code\RecipeAPI\RecipeAPISolution\src\RecipeAPI\bin\Debug\netcoreapp3.1\Npgsql
 C:\code\RecipeAPI\RecipeAPISolution\src\RecipeAPI\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\code\RecipeAPI\RecipeAPISolution\src\RecipeAPI\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\code\RecipeAPI\RecipeAPISolution\src\RecipeAPI\obj\Debug\netcoreapp3.1\RecipeAPI.csproj.CopyComplete
+C:\code\RecipeAPI\RecipeAPISolution\src\RecipeAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\code\RecipeAPI\RecipeAPISolution\src\RecipeAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

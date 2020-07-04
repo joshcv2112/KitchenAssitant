@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Npgsql;
 using RecipeAPI.Data;
+using AutoMapper;
+
 
 namespace RecipeAPI
 {
@@ -34,6 +36,8 @@ namespace RecipeAPI
             services.AddDbContext<RecipeContext>(opt => opt.UseNpgsql(builder.ConnectionString));
 
             services.AddControllers();
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddScoped<IRecipeAPIRepo, SqlRecipeAPIRepo>();
         }
