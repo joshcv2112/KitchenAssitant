@@ -19,7 +19,5 @@ jobs:
         dotnet-version: 3.1.101
     - name: Install dependencies
       run: dotnet restore
-    - name: Navigate
-      run: cd RecipeAPISolution/src/RecipeAPI
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build RecipeAPISolution\src\RecipeAPI --configuration Release --no-restore
