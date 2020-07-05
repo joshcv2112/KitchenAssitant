@@ -9,6 +9,9 @@ namespace RecipeAPI.Profiles
         public RecipesProfile()
         {
             CreateMap<Recipe, RecipeReadDto>();
+            CreateMap<RecipeCreateDto, Recipe>();
+            CreateMap<RecipeUpdateDto, Recipe>();
+            CreateMap<Recipe, RecipeUpdateDto>();
         }
     }
 }

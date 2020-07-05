@@ -1,7 +1,7 @@
 using RecipeAPI.Models;
 using System.Collections.Generic;
 using System.Linq;
-
+using System;
 
 namespace RecipeAPI.Data
 {
@@ -16,12 +16,20 @@ namespace RecipeAPI.Data
 
         public void CreateRecipe(Recipe rcp)
         {
-            throw new System.NotImplementedException();
+            if (rcp == null)
+            {
+                throw new ArgumentNullException(nameof(rcp));
+            }
+            _context.RecipeItems.Add(rcp);
         }
 
         public void DeleteRecipe(Recipe rcp)
         {
-            throw new System.NotImplementedException();
+            if (rcp == null)
+            {
+                throw new ArgumentNullException(nameof(rcp));
+            }
+            _context.RecipeItems.Remove(rcp);
         }
 
         public IEnumerable<Recipe> GetAllRecipes()
@@ -36,12 +44,12 @@ namespace RecipeAPI.Data
 
         public bool SaveChanges()
         {
-            throw new System.NotImplementedException();
+            return (_context.SaveChanges() >= 0);
         }
 
         public void UpdateRecipe(Recipe rcp)
         {
-            throw new System.NotImplementedException();
+            // We don't need to do anything, here...
         }
     }
 }

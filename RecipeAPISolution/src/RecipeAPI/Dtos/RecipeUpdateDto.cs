@@ -1,14 +1,9 @@
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace RecipeAPI.Models
+namespace RecipeAPI.Dtos
 {
-    public class Recipe
+    public class RecipeUpdateDto
     {
-        [Key]
-        [Required]
-        public int Id { get; set; }
-
         [Required]
         [MaxLength(250)]
         public string Title { get; set; }

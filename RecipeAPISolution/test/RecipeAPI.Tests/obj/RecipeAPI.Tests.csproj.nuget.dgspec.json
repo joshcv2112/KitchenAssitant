@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\code\\RecipeAPI\\RecipeAPISolution\\test\\RecipeAPI.Tests\\RecipeAPI.Tests.csproj": {}
+    "C:\\code\\RecipeAPI\\RecipeAPISolution\\test\\RecipeAPI.Tests\\RecipeAPI.Tests.csproj": {}
   },
   "projects": {
-    "c:\\code\\RecipeAPI\\RecipeAPISolution\\src\\RecipeAPI\\RecipeAPI.csproj": {
+    "C:\\code\\RecipeAPI\\RecipeAPISolution\\src\\RecipeAPI\\RecipeAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\code\\RecipeAPI\\RecipeAPISolution\\src\\RecipeAPI\\RecipeAPI.csproj",
+        "projectUniqueName": "C:\\code\\RecipeAPI\\RecipeAPISolution\\src\\RecipeAPI\\RecipeAPI.csproj",
         "projectName": "RecipeAPI",
-        "projectPath": "c:\\code\\RecipeAPI\\RecipeAPISolution\\src\\RecipeAPI\\RecipeAPI.csproj",
+        "projectPath": "C:\\code\\RecipeAPI\\RecipeAPISolution\\src\\RecipeAPI\\RecipeAPI.csproj",
         "packagesPath": "C:\\Users\\joshc\\.nuget\\packages\\",
-        "outputPath": "c:\\code\\RecipeAPI\\RecipeAPISolution\\src\\RecipeAPI\\obj\\",
+        "outputPath": "C:\\code\\RecipeAPI\\RecipeAPISolution\\src\\RecipeAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,6 +41,18 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.AspNetCore.JsonPatch": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.5, )"
@@ -78,14 +90,14 @@
         }
       }
     },
-    "c:\\code\\RecipeAPI\\RecipeAPISolution\\test\\RecipeAPI.Tests\\RecipeAPI.Tests.csproj": {
+    "C:\\code\\RecipeAPI\\RecipeAPISolution\\test\\RecipeAPI.Tests\\RecipeAPI.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\code\\RecipeAPI\\RecipeAPISolution\\test\\RecipeAPI.Tests\\RecipeAPI.Tests.csproj",
+        "projectUniqueName": "C:\\code\\RecipeAPI\\RecipeAPISolution\\test\\RecipeAPI.Tests\\RecipeAPI.Tests.csproj",
         "projectName": "RecipeAPI.Tests",
-        "projectPath": "c:\\code\\RecipeAPI\\RecipeAPISolution\\test\\RecipeAPI.Tests\\RecipeAPI.Tests.csproj",
+        "projectPath": "C:\\code\\RecipeAPI\\RecipeAPISolution\\test\\RecipeAPI.Tests\\RecipeAPI.Tests.csproj",
         "packagesPath": "C:\\Users\\joshc\\.nuget\\packages\\",
-        "outputPath": "c:\\code\\RecipeAPI\\RecipeAPISolution\\test\\RecipeAPI.Tests\\obj\\",
+        "outputPath": "C:\\code\\RecipeAPI\\RecipeAPISolution\\test\\RecipeAPI.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -104,8 +116,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "c:\\code\\RecipeAPI\\RecipeAPISolution\\src\\RecipeAPI\\RecipeAPI.csproj": {
-                "projectPath": "c:\\code\\RecipeAPI\\RecipeAPISolution\\src\\RecipeAPI\\RecipeAPI.csproj"
+              "C:\\code\\RecipeAPI\\RecipeAPISolution\\src\\RecipeAPI\\RecipeAPI.csproj": {
+                "projectPath": "C:\\code\\RecipeAPI\\RecipeAPISolution\\src\\RecipeAPI\\RecipeAPI.csproj"
               }
             }
           }
@@ -147,6 +159,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
