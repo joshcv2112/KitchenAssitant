@@ -25,7 +25,11 @@ namespace RecipeAPI.Data
 
         public void DeleteRecipe(Recipe rcp)
         {
-            throw new System.NotImplementedException();
+            if (rcp == null)
+            {
+                throw new ArgumentNullException(nameof(rcp));
+            }
+            _context.RecipeItems.Remove(rcp);
         }
 
         public IEnumerable<Recipe> GetAllRecipes()
