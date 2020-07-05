@@ -1,9 +1,13 @@
 using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
-using RecipeAPI.Data;
-using RecipeAPI.Models;
 using AutoMapper;
 using RecipeAPI.Dtos;
+using RecipeAPI.Data;
+using RecipeAPI.Models;
+using System.Linq;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.JsonPatch;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 
 namespace RecipeAPI.Controllers
@@ -61,6 +65,27 @@ namespace RecipeAPI.Controllers
                 return NotFound();
             }
             _mapper.Map(recipeUpdateDto, recipeModelFromRepo);
+            _repository.UpdateRecipe(recipeModelFromRepo);
+            _repository.SaveChanges();
+            return NoContent();
+        }
+
+        [HttpPatch("{id}")]
+        public ActionResult PartialCommandUpdate(int id,
+        JsonPatchDocument<RecipeUpdateDto> patchDoc)
+        {
+            var recipeModelFromRepo = _repository.GetRecipeById(id);
+            if (recipeModelFromRepo == null)
+            {
+                return NotFound();
+            }
+            var recipeToPatch = _mapper.Map<RecipeUpdateDto>(recipeModelFromRepo);
+            patchDoc.ApplyTo(recipeToPatch, ModelState);
+            if (!TryValidateModel(recipeToPatch))
+            {
+                return ValidationProblem(ModelState);
+            }
+            _mapper.Map(recipeToPatch, recipeModelFromRepo);
             _repository.UpdateRecipe(recipeModelFromRepo);
             _repository.SaveChanges();
             return NoContent();

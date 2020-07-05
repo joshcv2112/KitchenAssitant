@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Npgsql;
 using RecipeAPI.Data;
 using AutoMapper;
+using Newtonsoft.Json.Serialization;
 
 
 namespace RecipeAPI
@@ -34,6 +35,11 @@ namespace RecipeAPI
             builder.Password = Configuration["Password"];
 
             services.AddDbContext<RecipeContext>(opt => opt.UseNpgsql(builder.ConnectionString));
+
+            services.AddControllers().AddNewtonsoftJson(s =>
+            {
+                s.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            });
 
             services.AddControllers();
 
