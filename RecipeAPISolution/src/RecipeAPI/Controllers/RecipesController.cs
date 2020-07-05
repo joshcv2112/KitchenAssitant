@@ -28,7 +28,7 @@ namespace RecipeAPI.Controllers
             return Ok(_mapper.Map<IEnumerable<RecipeReadDto>>(recipeItems));
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "GetRecipeById")]
         public ActionResult<RecipeReadDto> GetRecipeById(int id)
         {
             var recipeItem = _repository.GetRecipeById(id);
@@ -37,6 +37,19 @@ namespace RecipeAPI.Controllers
                 return NotFound();
             }
             return Ok(_mapper.Map<RecipeReadDto>(recipeItem));
+        }
+
+        [HttpPost]
+        public ActionResult<RecipeReadDto> CreateRecipe(RecipeCreateDto recipeCreateDto)
+        {
+            var recipeModel = _mapper.Map<Recipe>(recipeCreateDto);
+            _repository.CreateRecipe(recipeModel);
+            _repository.SaveChanges();
+
+            var RecipeReadDto = _mapper.Map<RecipeReadDto>(recipeModel);
+
+            return CreatedAtRoute(nameof(GetRecipeById),
+                new { Id = RecipeReadDto.Id }, RecipeReadDto);
         }
     }
 }
