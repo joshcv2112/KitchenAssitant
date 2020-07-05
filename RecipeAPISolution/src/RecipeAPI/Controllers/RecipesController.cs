@@ -51,5 +51,19 @@ namespace RecipeAPI.Controllers
             return CreatedAtRoute(nameof(GetRecipeById),
                 new { Id = RecipeReadDto.Id }, RecipeReadDto);
         }
+
+        [HttpPut("{id}")]
+        public ActionResult UpdateRecipe(int id, RecipeUpdateDto recipeUpdateDto)
+        {
+            var recipeModelFromRepo = _repository.GetRecipeById(id);
+            if (recipeModelFromRepo == null)
+            {
+                return NotFound();
+            }
+            _mapper.Map(recipeUpdateDto, recipeModelFromRepo);
+            _repository.UpdateRecipe(recipeModelFromRepo);
+            _repository.SaveChanges();
+            return NoContent();
+        }
     }
 }

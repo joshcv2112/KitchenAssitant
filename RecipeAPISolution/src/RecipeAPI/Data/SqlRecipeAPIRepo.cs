@@ -45,7 +45,7 @@ namespace RecipeAPI.Data
 
         public void UpdateRecipe(Recipe rcp)
         {
-            throw new System.NotImplementedException();
+            // We don't need to do anything, here...
         }
     }
 }
