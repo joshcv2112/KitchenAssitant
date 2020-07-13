@@ -1737,11 +1737,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\code\\RecipeAPI\\RecipeAPISolution\\src\\RecipeAPI\\RecipeAPI.csproj",
+      "projectUniqueName": "C:\\code\\KitchenAssistant\\KitchenAssitant\\RecipeAPISolution\\src\\RecipeAPI\\RecipeAPI.csproj",
       "projectName": "RecipeAPI",
-      "projectPath": "C:\\code\\RecipeAPI\\RecipeAPISolution\\src\\RecipeAPI\\RecipeAPI.csproj",
+      "projectPath": "C:\\code\\KitchenAssistant\\KitchenAssitant\\RecipeAPISolution\\src\\RecipeAPI\\RecipeAPI.csproj",
       "packagesPath": "C:\\Users\\joshc\\.nuget\\packages\\",
-      "outputPath": "C:\\code\\RecipeAPI\\RecipeAPISolution\\src\\RecipeAPI\\obj\\",
+      "outputPath": "C:\\code\\KitchenAssistant\\KitchenAssitant\\RecipeAPISolution\\src\\RecipeAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
