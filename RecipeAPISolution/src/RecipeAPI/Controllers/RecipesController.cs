@@ -71,7 +71,7 @@ namespace RecipeAPI.Controllers
         }
 
         [HttpPatch("{id}")]
-        public ActionResult PartialCommandUpdate(int id,
+        public ActionResult PartialRecipeUpdate(int id,
         JsonPatchDocument<RecipeUpdateDto> patchDoc)
         {
             var recipeModelFromRepo = _repository.GetRecipeById(id);
