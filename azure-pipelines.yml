@@ -22,7 +22,7 @@ steps:
   inputs:
     command: publish
     publishWebProjects: false
-    projects: 'src/RecipeAPI/*.csproj'
+    projects: 'RecipeAPISolution/src/RecipeAPI/*.csproj'    
     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
