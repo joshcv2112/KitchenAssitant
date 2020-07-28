@@ -65,7 +65,7 @@ namespace RecipeAPI.Tests
         {
             mockRepo.Setup(repo => repo.GetRecipeById(0)).Returns(() => null);
             var controller = new RecipesController(mockRepo.Object, mapper);
-            var result = controller.GetRecipeById(1);   
+            var result = controller.GetRecipeById(1);
             Assert.IsType<NotFoundResult>(result.Result);
         }
 
@@ -73,7 +73,8 @@ namespace RecipeAPI.Tests
         public void GetRecipeById_Returns200OK_WhenValidIDProvided()
         {
             mockRepo.Setup(repo =>
-                repo.GetRecipeById(1)).Returns(new Recipe{
+                repo.GetRecipeById(1)).Returns(new Recipe
+                {
                     Id = 1,
                     Title = "mock",
                     Ingredients = "mock",
@@ -81,7 +82,8 @@ namespace RecipeAPI.Tests
                     Description = "mock",
                     Source = "mock",
                     Rating = 5,
-                    PrepTime = "mock"
+                    PrepTime = "mock",
+                    ImageURL = "sampleURL.com/image.jpg"
                 });
             var controller = new RecipesController(mockRepo.Object, mapper);
             var result = controller.GetRecipeById(1);
@@ -92,7 +94,8 @@ namespace RecipeAPI.Tests
         public void GetRecipeById_ReturnsRecipeReadDto_WhenValidIDProvided()
         {
             mockRepo.Setup(repo =>
-                repo.GetRecipeById(1)).Returns(new Recipe{
+                repo.GetRecipeById(1)).Returns(new Recipe
+                {
                     Id = 1,
                     Title = "mock",
                     Ingredients = "mock",
@@ -100,7 +103,8 @@ namespace RecipeAPI.Tests
                     Description = "mock",
                     Source = "mock",
                     Rating = 5,
-                    PrepTime = "mock"
+                    PrepTime = "mock",
+                    ImageURL = "sampleURL.com/image.jpg"
                 });
             var controller = new RecipesController(mockRepo.Object, mapper);
             var result = controller.GetRecipeById(1);
@@ -112,26 +116,9 @@ namespace RecipeAPI.Tests
         [Fact]
         public void CreateRecipe_ReturnsCorrectResourceType_WhenValidObjectSubmitted()
         {
-            mockRepo.Setup(repo => 
-                repo.GetRecipeById(1)).Returns(new Recipe { 
-                    Id = 1, 
-                    Title = "mock",
-                    Ingredients = "mock",
-                    Instructions = "mock",
-                    Description = "mock",
-                    Source = "mock",
-                    Rating = 5,
-                    PrepTime = "mock" });
-            var controller = new RecipesController(mockRepo.Object, mapper);
-            var result = controller.CreateRecipe(new RecipeCreateDto {});
-            Assert.IsType<ActionResult<RecipeReadDto>>(result);
-        }
-
-        [Fact]
-        public void CreateRecipe_Returns201Created_WhenValidObjectSubmitted()
-        {
             mockRepo.Setup(repo =>
-                repo.GetRecipeById(1)).Returns(new Recipe { 
+                repo.GetRecipeById(1)).Returns(new Recipe
+                {
                     Id = 1,
                     Title = "mock",
                     Ingredients = "mock",
@@ -139,10 +126,33 @@ namespace RecipeAPI.Tests
                     Description = "mock",
                     Source = "mock",
                     Rating = 5,
-                    PrepTime = "mock" });
-                var controller = new RecipesController(mockRepo.Object, mapper);
-                var result = controller.CreateRecipe(new RecipeCreateDto {});
-                Assert.IsType<CreatedAtRouteResult>(result.Result);
+                    PrepTime = "mock",
+                    ImageURL = "sampleURL.com/image.jpg"
+                });
+            var controller = new RecipesController(mockRepo.Object, mapper);
+            var result = controller.CreateRecipe(new RecipeCreateDto { });
+            Assert.IsType<ActionResult<RecipeReadDto>>(result);
+        }
+
+        [Fact]
+        public void CreateRecipe_Returns201Created_WhenValidObjectSubmitted()
+        {
+            mockRepo.Setup(repo =>
+                repo.GetRecipeById(1)).Returns(new Recipe
+                {
+                    Id = 1,
+                    Title = "mock",
+                    Ingredients = "mock",
+                    Instructions = "mock",
+                    Description = "mock",
+                    Source = "mock",
+                    Rating = 5,
+                    PrepTime = "mock",
+                    ImageURL = "sampleURL.com/image.jpg"
+                });
+            var controller = new RecipesController(mockRepo.Object, mapper);
+            var result = controller.CreateRecipe(new RecipeCreateDto { });
+            Assert.IsType<CreatedAtRouteResult>(result.Result);
         }
         #endregion
 
@@ -151,7 +161,8 @@ namespace RecipeAPI.Tests
         public void UpdateRecipe_Returns204NoContent_WhenValidObjectSubmitted()
         {
             mockRepo.Setup(repo =>
-                repo.GetRecipeById(1)).Returns(new Recipe { 
+                repo.GetRecipeById(1)).Returns(new Recipe
+                {
                     Id = 1,
                     Title = "mock",
                     Ingredients = "mock",
@@ -159,9 +170,11 @@ namespace RecipeAPI.Tests
                     Description = "mock",
                     Source = "mock",
                     Rating = 5,
-                    PrepTime = "mock" });
+                    PrepTime = "mock",
+                    ImageURL = "sampleURL.com/image.jpg"
+                });
             var controller = new RecipesController(mockRepo.Object, mapper);
-            var result = controller.UpdateRecipe(1, new RecipeUpdateDto {});
+            var result = controller.UpdateRecipe(1, new RecipeUpdateDto { });
             Assert.IsType<NoContentResult>(result);
         }
 
@@ -170,7 +183,7 @@ namespace RecipeAPI.Tests
         {
             mockRepo.Setup(repo => repo.GetRecipeById(0)).Returns(() => null);
             var controller = new RecipesController(mockRepo.Object, mapper);
-            var result = controller.UpdateRecipe(0, new RecipeUpdateDto {});
+            var result = controller.UpdateRecipe(0, new RecipeUpdateDto { });
             Assert.IsType<NotFoundResult>(result);
         }
         #endregion
@@ -192,9 +205,18 @@ namespace RecipeAPI.Tests
         public void DeleteRecipe_Returns204NoContent_WhenValidResourceIDSubmitted()
         {
             mockRepo.Setup(repo =>
-                repo.GetRecipeById(1)).Returns(new Recipe { 
-                    Id = 1, Title = "mock", Ingredients = "mock", Instructions = "mock",
-                    Description = "mock", Source = "mock", Rating = 5, PrepTime = "mock" });
+                repo.GetRecipeById(1)).Returns(new Recipe
+                {
+                    Id = 1,
+                    Title = "mock",
+                    Ingredients = "mock",
+                    Instructions = "mock",
+                    Description = "mock",
+                    Source = "mock",
+                    Rating = 5,
+                    PrepTime = "mock",
+                    ImageURL = "sampleURL.com/image.jpg"
+                });
             var controller = new RecipesController(mockRepo.Object, mapper);
             var result = controller.DeleteRecipe(1);
             Assert.IsType<NoContentResult>(result);
@@ -224,7 +246,8 @@ namespace RecipeAPI.Tests
                     Description = "Delicious chicken with sauce and cheese",
                     Source = "Family Recipe",
                     Rating = 5,
-                    PrepTime = "30 min"
+                    PrepTime = "30 min",
+                    ImageURL = "sampleURL.com/image.jpg"
                 });
             }
             return recipes;

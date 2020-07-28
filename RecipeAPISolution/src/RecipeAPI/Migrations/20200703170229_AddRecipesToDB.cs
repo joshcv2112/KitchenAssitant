@@ -20,7 +20,8 @@ namespace RecipeAPI.Migrations
                     Description = table.Column<string>(nullable: true),
                     Source = table.Column<string>(nullable: true),
                     Rating = table.Column<int>(nullable: false),
-                    PrepTime = table.Column<string>(nullable: true)
+                    PrepTime = table.Column<string>(nullable: true),
+                    ImageURL = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

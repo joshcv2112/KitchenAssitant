@@ -21,5 +21,6 @@ namespace RecipeAPI.Dtos
         public int Rating { get; set; }
 
         public string PrepTime { get; set; }
+        public string ImageURL { get; set; }
     }
 }

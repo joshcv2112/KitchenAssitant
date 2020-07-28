@@ -18,7 +18,8 @@ namespace RecipeAPI.Tests
                 Description = "Delicious chicken with sauce and cheese",
                 Source = "Family Recipe",
                 Rating = 5,
-                PrepTime = "30 min"
+                PrepTime = "30 min",
+                ImageURL = ""
             };
         }
 
@@ -81,6 +82,14 @@ namespace RecipeAPI.Tests
             string newPrepTime = "45 minutes";
             testRecipe.PrepTime = newPrepTime;
             Assert.Equal(newPrepTime, testRecipe.PrepTime);
+        }
+
+        [Fact]
+        public void CanChangeImageURL()
+        {
+            string newImageURL = "SampleUrl.com/image.jpg";
+            testRecipe.ImageURL = newImageURL;
+            Assert.Equal(newImageURL, testRecipe.ImageURL);
         }
     }
 }
