@@ -10,6 +10,6 @@ namespace RecipeAPI.Dtos
         public string Source { get; set; }
         public int Rating { get; set; }
         public string PrepTime { get; set; }
-
+        public string ImageURL { get; set; }
     }
 }

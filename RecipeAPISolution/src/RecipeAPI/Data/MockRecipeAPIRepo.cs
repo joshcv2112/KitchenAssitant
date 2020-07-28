@@ -25,7 +25,8 @@ namespace RecipeAPI.Data
                            Description="",
                            Source="",
                            Rating=5,
-                           PrepTime="5 min"
+                           PrepTime="5 min",
+                           ImageURL=""
                            },
                 new Recipe{Id = 1, Title="My First Recipe",
                            Ingredients="Potatoes, Cheese",
@@ -33,7 +34,8 @@ namespace RecipeAPI.Data
                            Description="",
                            Source="",
                            Rating=5,
-                           PrepTime="5 min"
+                           PrepTime="5 min",
+                           ImageURL=""
                            },
                 new Recipe{Id = 2, Title="My First Recipe",
                            Ingredients="Potatoes, Cheese",
@@ -41,7 +43,8 @@ namespace RecipeAPI.Data
                            Description="",
                            Source="",
                            Rating=5,
-                           PrepTime="5 min"
+                           PrepTime="5 min",
+                           ImageURL=""
                            },
             };
             return recipes;
@@ -56,7 +59,8 @@ namespace RecipeAPI.Data
                 Description = "",
                 Source = "",
                 Rating = 5,
-                PrepTime = "5 min"
+                PrepTime = "5 min",
+                ImageURL = ""
             };
         }
 
